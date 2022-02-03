@@ -47,19 +47,6 @@ public class PlayerController : MonoBehaviour
         {
             MovePlayerTo(Vector2.down);
         }
-
-        /*var obj = bombPrefab;
-        if ()
-        {
-            Destroy(obj);
-
-            var colliders = Physics2D.OverlapCircleAll(obj.transform.position, 1f, explosionMask);
-
-            foreach (var cldr in colliders)
-            {
-                Destroy(cldr.gameObject);
-            }
-        }*/
     }
 
     private void MovePlayerTo(Vector2 dir)
@@ -90,10 +77,5 @@ public class PlayerController : MonoBehaviour
             Instantiate(bombPrefab,_transform.position, Quaternion.identity);  
         }
     }
-    /*private GameObject BombRaycast()
-    {
-        var hit = Physics2D.OverlapCircleAll(bombPrefab.transform.position, 1f,explosionMask);
-        return hit.collider != null ? hit.collider.gameObject : null;
-    }*/
 }
 
