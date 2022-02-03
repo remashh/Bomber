@@ -6,12 +6,23 @@ using DG.Tweening;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private LayerMask raycastMask;
+    
     [SerializeField] private GameObject bombPrefab;
+    private Transform _transform;
 
     private bool isMovement;
 
+    private void Start()
+    {
+        _transform = transform;
+    }
     private void Update()
     {
+        if (Input.GetKeyDown (KeyCode.Space))
+        {
+            DropBomb ();
+        }
+        
         if (isMovement)
         {
             return;
@@ -36,6 +47,19 @@ public class PlayerController : MonoBehaviour
         {
             MovePlayerTo(Vector2.down);
         }
+
+        /*var obj = bombPrefab;
+        if ()
+        {
+            Destroy(obj);
+
+            var colliders = Physics2D.OverlapCircleAll(obj.transform.position, 1f, explosionMask);
+
+            foreach (var cldr in colliders)
+            {
+                Destroy(cldr.gameObject);
+            }
+        }*/
     }
 
     private void MovePlayerTo(Vector2 dir)
@@ -59,7 +83,17 @@ public class PlayerController : MonoBehaviour
         var hit = Physics2D.Raycast(transform.position, dir, 1f, raycastMask);
         return hit.collider != null;
     }
-    
-
+    private void DropBomb ()
+    {
+        if (bombPrefab)
+        {
+            Instantiate(bombPrefab,_transform.position, Quaternion.identity);  
+        }
+    }
+    /*private GameObject BombRaycast()
+    {
+        var hit = Physics2D.OverlapCircleAll(bombPrefab.transform.position, 1f,explosionMask);
+        return hit.collider != null ? hit.collider.gameObject : null;
+    }*/
 }
 

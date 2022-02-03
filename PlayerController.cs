@@ -58,4 +58,5 @@ public class PlayerController : MonoBehaviour
         var hit = Physics2D.Raycast(transform.position, dir, 1f, raycastMask);
         return hit.collider != null;
     }
+    
 }

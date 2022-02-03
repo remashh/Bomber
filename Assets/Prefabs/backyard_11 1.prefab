@@ -10,10 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5121680798776150089}
   - component: {fileID: 3376746275128472522}
-  - component: {fileID: -564034888868306007}
-  - component: {fileID: -7636275215234046879}
+  - component: {fileID: 8214881619116627195}
   m_Layer: 0
-  m_Name: backyard_11
+  m_Name: backyard_11 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ea1c3cc273e5e3d498a66216e63667b3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,23 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-564034888868306007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146960350018709207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e6df33dec02b4dcb87da4c768234b1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 1146960350018709207, guid: 06d22a0d7dc444a4f965dbb3baf1dc7b, type: 3}
-  explosionMask:
-    serializedVersion: 2
-    m_Bits: 192
---- !u!61 &-7636275215234046879
+--- !u!61 &8214881619116627195
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
