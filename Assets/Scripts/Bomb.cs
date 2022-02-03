@@ -13,7 +13,7 @@ public class Bomb : MonoBehaviour
     
     void Explode()
     {
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        //Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         var hit = Physics2D.OverlapCircleAll(transform.position, 1f,explosionMask);
         foreach (var collider in hit)
         {

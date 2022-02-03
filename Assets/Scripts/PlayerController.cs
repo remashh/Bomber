@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -70,12 +71,18 @@ public class PlayerController : MonoBehaviour
         var hit = Physics2D.Raycast(transform.position, dir, 1f, raycastMask);
         return hit.collider != null;
     }
-    private void DropBomb ()
+
+    private void DropBomb()
     {
         if (bombPrefab)
         {
-            Instantiate(bombPrefab,_transform.position, Quaternion.identity);  
+            Instantiate(bombPrefab, _transform.position, Quaternion.identity);
         }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene(0);
     }
 }
 
